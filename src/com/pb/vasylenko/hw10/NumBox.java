@@ -66,4 +66,20 @@ public class NumBox<T extends Number> {
         }
         return sum;
     }
+
+    public T max() {
+        T max = null;
+        for (T t : this.array) {
+            if (t != null) {
+                if (max != null) {
+                    if (t.doubleValue() > max.doubleValue()) {
+                        max = t;
+                    }
+                } else {
+                    max = t;
+                }
+            }
+        }
+        return max;
+    }
 }
